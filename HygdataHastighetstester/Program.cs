@@ -9,7 +9,6 @@ namespace HygdataHastighetstester
         {
             using (var context = new HygdataContext())
             {
-
                 //FÖRSÖK 1 
                 Stopwatch sw1 = new Stopwatch();
                 sw1.Start();
@@ -38,7 +37,6 @@ namespace HygdataHastighetstester
 
                 var starsLum3 = stars3
                     .OrderBy(h => h.Lum);
-
                 sw3.Stop();
 
                 //FÖRSÖK 4
@@ -58,7 +56,6 @@ namespace HygdataHastighetstester
                     .OrderBy(h => h.Lum)
                     .ToList();
                 sw5.Stop();
-
 
                 //RESULTAT
                 Console.WriteLine("FÖRSÖK 1:");
@@ -108,7 +105,7 @@ namespace HygdataHastighetstester
             var minTime = times.Min();
             var winnerIndex = Array.IndexOf(times, minTime);
 
-            Console.WriteLine("\nVinnare: FÖRSÖK " + (winnerIndex + 1) + " med tiden: " + minTime + " ms");
+            Console.WriteLine("VINNARE: FÖRSÖK " + (winnerIndex + 1) + " med tiden " + minTime + " ms");
         }
     }
 }
